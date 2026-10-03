@@ -1,5 +1,6 @@
-# Patrón State (Estado)
+## Patrón State (Estado)
 
+## 1. Diagrama UML
 ```mermaid
 classDiagram
     class Main {
@@ -62,15 +63,15 @@ classDiagram
     EstadoDesbloqueado --> Telefono : Cambia estado de
 ```
 
-# 2. Problema
+## 2. Problema
 Imagina que tienes una clase que cambia su comportamiento dependiendo de su estado interno. Si implementas esto usando un bloque de código gigante con condicionales if-else o switch (por ejemplo: if (estado == APAGADO) { ... } else if (estado == BLOQUEADO) { ... }), la clase se volverá inmanejable. Si en el futuro necesitas agregar un nuevo estado, tendrás que modificar todos los métodos de esa clase, rompiendo el principio de Abierto/Cerrado (Open/Closed) de SOLID.
 
 
-# 3. Solución
+## 3. Solución
 El patrón State sugiere aislar la lógica relacionada con los estados dentro de clases independientes.
 En lugar de que el objeto original ("Contexto") realice las acciones por sí mismo basado en condicionales, este guarda una referencia a un objeto de estado y le delega el trabajo. Para cambiar el estado del contexto, simplemente reemplazas el objeto de estado actual por otro objeto que represente el nuevo estado.
 
-# 4. Consecuencias
+## 4. Consecuencias
 Positivas:
 
 Principio de Responsabilidad Única: Organiza el código relacionado con estados particulares en clases separadas, limpiando la clase principal.
