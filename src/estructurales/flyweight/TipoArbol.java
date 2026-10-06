@@ -12,6 +12,6 @@ public class TipoArbol {
     }
 
     public void dibujar(int x, int y) {
-        System.out.println("Dibujando árbol [" + nombre + "] con color " + color + " en coordenadas (" + x + ", " + y + ")");
+        System.out.println("Dibujando árbol [" + nombre + "] con color " + color + " y textura '" + textura + "' en coordenadas (" + x + ", " + y + ")");
     }
 }
