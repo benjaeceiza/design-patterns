@@ -8,6 +8,9 @@ public class MainDecorator {
         Bebida cafeConLecheYAzucar = new ConAzucar(new ConLeche(new CafeSimple()));
         mostrar(cafeConLecheYAzucar);
 
+        Bebida cafeConLeche = new ConLeche(new CafeSimple());
+        mostrar(cafeConLeche);
+
         Bebida teCompleto = new ConCrema(new ConAzucar(new ConLeche(new TeSimple())));
         mostrar(teCompleto);
 
